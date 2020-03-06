@@ -26,8 +26,8 @@ This project was put together using create-react-app (CRA). You will not need to
 - [x] Add your team lead as collaborator on Github.
 - [x] Clone your OWN version of the repository in your terminal.
 - [x] Download project dependencies by running `npm install`.
-- [ ] Add the dependencies you will need to implement Redux, using **npm**.
-- [ ] Start up the app using `npm start`.
+- [x] Add the dependencies you will need to implement Redux, using **npm**.
+- [x] Start up the app using `npm start`.
 - [x] Create a new branch: git checkout -b `<firstName-lastName>`.
       Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
 - [x] Push commits: git push origin `<firstName-lastName>`.
