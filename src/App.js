@@ -5,7 +5,18 @@ import AddedFeatures from './components/AddedFeatures';
 import AdditionalFeatures from './components/AdditionalFeatures';
 import Total from './components/Total';
 
+import { createStore } from "redux";
+
 const App = () => {
+  
+  function reducer() {
+    return {
+      title: "Hello world in redux store"
+    }
+  }
+  
+  const store = createStore(reducer);
+  
   const state = {
     additionalPrice: 0,
     car: {
