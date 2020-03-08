@@ -67,3 +67,5 @@ const mapStateToProps = state => {
 }
 //we are taking map state to props from here and adding it to main store
 export default connect(mapStateToProps, {})(App);
+//empty curly brackets means there is no action here that I want to use
+//the actions are from other places.

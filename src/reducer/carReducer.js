@@ -47,7 +47,7 @@ export const carReducer = (state = initialState, actions) => {
                     price: state.car.price - actions.payload.price
                 }
             }
-
+                //this is what happens when nothing is in the case
             default: 
                 return state;
     }
