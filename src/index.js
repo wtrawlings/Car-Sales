@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-import rootReducer from "./reducer/reducer" 
+import { carReducer } from "./reducer/carReducer" 
 
 
 import 'bulma/css/bulma.css';
 import './styles.scss';
 
   //createStore uses reducer as a pass through
-const store = createStore(rootReducer);
+const store = createStore(carReducer);
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

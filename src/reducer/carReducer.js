@@ -31,7 +31,7 @@ export const carReducer = (state = initialState, actions) => {
                         ...state.car.features, 
                         actions.payload
                     ],
-                    price: state.car.price + actions.payload.price
+                    additionalPrice: state.additionalPrice + actions.payload.price
                 }
             };
        case REMOVE_FEATURES: 
@@ -41,10 +41,9 @@ export const carReducer = (state = initialState, actions) => {
                 //then detail the changes to the state you want to make
                 car: {
                     ...state.car,
-                    features: [
-                        state.car.features.filter(item => item.id !== actions.payload.id) , 
-                    ],
-                    price: state.car.price - actions.payload.price
+                    features: 
+                        state.car.features.filter(item => item.id !== actions.payload.id), 
+                    additionalPrice: state.additionalPrice - actions.payload.price
                 }
             }
                 //this is what happens when nothing is in the case
