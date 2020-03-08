@@ -1,6 +1,6 @@
 import { ADD_FEATURES, REMOVE_FEATURES } from "../actions";
 
-const initialState = {
+export const initialState = {
     additionalPrice: 0,
     car: {
       price: 26395,

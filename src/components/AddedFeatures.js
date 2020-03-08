@@ -7,6 +7,7 @@ const AddedFeatures = props => {
   return (
     <div className="content">
       <h6>Added features:</h6>
+    {console.log(props)}
       {props.features.length ? (
         <ol type="1">
           {props.features.map(item => (
@@ -21,11 +22,13 @@ const AddedFeatures = props => {
 };
 
 const mapStateToProps = state =>{
-  console.log("THIS:", state)
+  //console.log("THIS:", state)
   return {
-    additionalPrice: state.car.additionalPrice,
-    additionalFeatures: state.car.additionalFeatures,
-    car: state.car
+    //additionalPrice: state.car.additionalPrice,
+    //addedFeatures: state.car.Features,
+    //car: state.car
+    //features: state.car.features
+    state
   };
 }
 

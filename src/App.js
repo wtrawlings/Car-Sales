@@ -9,48 +9,15 @@ import { connect } from 'react-redux';
 
 
 const App = (props) => {
-  //add the reducer function
-  // function reducer() {
-  //   return {
-  //     title: "Hello world in redux store"
-  //   }
-  // }
-
-  //is this my initital state or is this something else?
-  //do I replace this with initial state?
-  // const state = {
-  //   additionalPrice: 0,
-  //   car: {
-  //     price: 26395,
-  //     name: '2019 Ford Mustang',
-  //     image:
-  //       'https://cdn.motor1.com/images/mgl/0AN2V/s1/2019-ford-mustang-bullitt.jpg',
-  //     features: []
-  //   },
-  //   additionalFeatures: [
-  //     { id: 1, name: 'V-6 engine', price: 1500 },
-  //     { id: 2, name: 'Racing detail package', price: 1500 },
-  //     { id: 3, name: 'Premium sound system', price: 500 },
-  //     { id: 4, name: 'Rear spoiler', price: 250 }
-  //   ]
-  // };
-
-  // const removeFeature = item => {
-  //   // dispatch an action here to remove an item
-  // };
-
-  // const buyItem = item => {
-  //   // dipsatch an action here to add an item
-  // };
 
   return (
     <div className="boxes">
       <div className="box">
         <Header car={props.car} />
-        <AddedFeatures car={props.car} />
+        <AddedFeatures features = {props.features}/>
       </div>
       <div className="box">
-        <AdditionalFeatures additionalFeatures={props.additionalFeatures} />
+        <AdditionalFeatures />
         <Total car={props.car} additionalPrice={props.additionalPrice} />
       </div>
     </div>
@@ -58,11 +25,12 @@ const App = (props) => {
 };
 
 const mapStateToProps = state => {
-  console.log(state);
+  //console.log(state);
   return {
-    additionalFeatures: state.additionalFeatures,
+    //additionalFeatures: state.additionalFeatures,
     additionalPrice: state.additionalPrice,
-    car: state.car
+    car: state.car,
+    features: state.car.features
   };
 }
 //we are taking map state to props from here and adding it to main store

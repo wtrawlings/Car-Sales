@@ -19,7 +19,7 @@ const AdditionalFeatures = props => {
   );
 };
 const mapStateToProps = state =>{
-  //console.log("THIS:", state)
+  console.log("THIS:", state)
   return {
     //additionalPrice: state.additionalPrice,
     additionalFeatures: state.additionalFeatures
