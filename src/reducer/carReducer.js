@@ -20,21 +20,28 @@ export const initialState = {
 export const carReducer = (state = initialState, actions) => {
     //and then magic happens
     switch (actions.type) {
+        
         case ADD_FEATURES: 
             return {
+                
                 //bring in all the state with a spread operator
                 ...state,
                 //then detail the changes to the state you want to make
                 car: {
                     ...state.car,
                     features: [
-                        ...state.car.features, 
-                        actions.payload
+                        ...state.car.features, actions.payload
                     ],
-                    additionalPrice: state.additionalPrice + actions.payload.price
                 //??? is my car adding to car.price or not?
                 //additionalPrice is outside of car, right?
-                }
+                //How to prevent multi of same part added?
+                },
+                additionalPrice: state.additionalPrice + actions.payload.price,
+
+                additionalFeatures: [
+                    ...state.additionalFeatures.filter(item => item.id !== actions.payload.id)
+                ], 
+                
             };
        case REMOVE_FEATURES: 
             return {
@@ -44,8 +51,9 @@ export const carReducer = (state = initialState, actions) => {
                 car: {
                     ...state.car,
                     features: 
-                        state.car.features.filter(item => item.id !== actions.payload.id), 
+                        [state.car.features.filter(item => item.id !== actions.payload.id)], 
                     additionalPrice: state.additionalPrice - actions.payload.price
+                    
                 }
             }
                 //this is what happens when nothing is in the case
