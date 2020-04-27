@@ -5,7 +5,6 @@ import { connect } from "react-redux";
 const AdditionalFeature = props => {
   return (
     <li>
-      
       <button className="button" onClick = {() => props.addFeatures(props.feature)} >Add</button>
       {props.feature.name} (+{props.feature.price})
     </li>

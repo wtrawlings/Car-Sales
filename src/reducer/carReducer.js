@@ -51,10 +51,14 @@ export const carReducer = (state = initialState, actions) => {
                 car: {
                     ...state.car,
                     features: 
-                        [state.car.features.filter(item => item.id !== actions.payload.id)], 
-                    additionalPrice: state.additionalPrice - actions.payload.price
+                        [...state.car.features.filter(item => item.id !== actions.payload.id)], 
                     
-                }
+                },
+                additionalPrice: state.additionalPrice - actions.payload.price,
+                additionalFeatures: [
+                    ...state.car.features, actions.payload
+                    //...state.additionalFeatures.filter(item => item.id !== actions.payload.id)
+                ], 
             }
                 //this is what happens when nothing is in the case
             default: 
