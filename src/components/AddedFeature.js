@@ -12,7 +12,7 @@ const AddedFeature = props => {
 };
 
 const mapStateToProps = state =>{
-  //console.log("THIS:", state)
+  console.log("THIS:", state)
   return {
     state
   };
