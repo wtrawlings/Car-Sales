@@ -20,4 +20,4 @@ ReactDOM.render(
         <App />
     </Provider>, rootElement);
 
-//Do we wrap PROVIDER inside of ROUTER? Yes Router is on the outside!
+//Do we wrap PROVIDER OUTside of ROUTER? Yes Router is on the INside!
