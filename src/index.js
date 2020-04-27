@@ -16,7 +16,7 @@ console.log('current state: ', store.getState());
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-    <Provider store={store}> {/**this STORE is technically a prop */}
+    <Provider store={store}> {/**this STORE is technically a prop that MUST be called 'store' */}
         <App />
     </Provider>, rootElement);
 
