@@ -1,4 +1,7 @@
 //these are the two actions to make
+//this is an example of action creator functions
+//make a basic constant with a string inside it
+//then have that return your TYPE and PAYLOAD
 export const ADD_FEATURES  = "ADD_FEATURES";
 
 export const addFeatures = item => {

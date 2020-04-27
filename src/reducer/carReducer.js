@@ -32,6 +32,8 @@ export const carReducer = (state = initialState, actions) => {
                         actions.payload
                     ],
                     additionalPrice: state.additionalPrice + actions.payload.price
+                //??? is my car adding to car.price or not?
+                //additionalPrice is outside of car, right?
                 }
             };
        case REMOVE_FEATURES: 
