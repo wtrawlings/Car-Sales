@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import { createStore } from "redux";
-import { Provider } from "react-redux";
+import { Provider } from "react-redux"; //bridge piece
 import { carReducer } from "./reducer/carReducer" 
 
 
@@ -16,7 +16,7 @@ console.log('current state: ', store.getState());
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(
-    <Provider store={store}>
+    <Provider store={store}> {/**this STORE is technically a prop */}
         <App />
     </Provider>, rootElement);
 
