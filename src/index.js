@@ -12,7 +12,7 @@ import './styles.scss';
 //you have to put a reducer inside the create store
   //createStore uses reducer as a pass through
 const store = createStore(carReducer);
-console.log('current state: ', store.getState());
+//console.log('current state: ', store.getState());
 
 const rootElement = document.getElementById('root');
 ReactDOM.render(

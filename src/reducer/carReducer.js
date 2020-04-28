@@ -20,7 +20,6 @@ export const initialState = {
 export const carReducer = (state = initialState, actions) => {
     //and then magic happens
     switch (actions.type) {
-        
         case ADD_FEATURES: 
             return {
                 
@@ -44,6 +43,9 @@ export const carReducer = (state = initialState, actions) => {
                 
             };
        case REMOVE_FEATURES: 
+       console.log('payload: ', actions.payload);
+       console.log('state: ', state);
+
             return {
                 //bring in all the state with a spread operator
                 ...state,
@@ -54,15 +56,16 @@ export const carReducer = (state = initialState, actions) => {
                         [...state.car.features.filter(item => item.id !== actions.payload.id)], 
                     
                 },
-                additionalPrice: state.additionalPrice - actions.payload.price,
                 additionalFeatures: [
-                    ...state.car.features, actions.payload
-                    //...state.additionalFeatures.filter(item => item.id !== actions.payload.id)
+                    ...state.additionalFeatures, actions.payload
+                    //...state.car.features, actions.payload
+                    
                 ], 
+                additionalPrice: state.additionalPrice - actions.payload.price,
             }
                 //this is what happens when nothing is in the case
-            default: 
-                return state;
+        default: 
+            return state;
     }
      
 }
